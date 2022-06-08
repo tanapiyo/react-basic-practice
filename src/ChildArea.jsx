@@ -5,12 +5,13 @@ const style = {
   backgroundColor: "red"
 };
 export const ChildArea = memo((props) => {
-  const { open } = props;
+  const { open, onClickClose } = props;
   return (
     <>
       {open ? (
         <div style={style}>
           <p>子コンポーネント</p>
+          <button onClick={onClickClose}>閉じる</button>
         </div>
       ) : null}
     </>
